@@ -1,7 +1,6 @@
-import scala.runtime.ScalaRunTime._
+package two
 
-object exercise {
-
+object Sorted {
   def isSorted[T](arr: Array[T], greaterThan: (T, T) => Boolean): Boolean = {
     @annotation.tailrec
     def loop(n: Int): Boolean =
@@ -12,7 +11,7 @@ object exercise {
       } else {
         loop(n + 1)
       }
-    
+
     loop(0)
   }
 

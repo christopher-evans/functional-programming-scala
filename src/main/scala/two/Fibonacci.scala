@@ -1,5 +1,6 @@
+package two
 
-object exercise {
+object Fibonacci {
   def fibonacci(n: Int): Int = {
     @annotation.tailrec
     def go(n: Int, prev: Int, acc: Int): Int =
@@ -10,7 +11,7 @@ object exercise {
       } else {
         go(n - 1, acc, prev + acc)
       }
-    
+
     go(n, 0, 1)
   }
 
