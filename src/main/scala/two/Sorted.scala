@@ -17,7 +17,7 @@ object Sorted {
 
   def print(arr: Array[Int]) = {
     val sorted = isSorted(arr, (left: Int, right: Int) => left > right)
-    val str = stringOf(arr)
+    val str = arr.mkString(", ")
     val status = if (sorted) "sorted" else "not sorted"
 
     println(s"The array ${str} is ${status}")
